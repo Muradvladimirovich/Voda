@@ -2,157 +2,311 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>ПРОЕКТ+ — Отопление • Вентиляция • Кондиционирование</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ПРОЕКТ+ — Инженерные системы под ключ</title>
+
+<meta name="description" content="ПРОЕКТ+ — отопление, вентиляция, кондиционирование. Дорого. Под ключ. Республика Дагестан.">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background: #ffffff; /* белый фон */
-        color: #000000;      /* чёрный текст */
-        line-height: 1.6;
-    }
+:root{
+    --bg:#0b0f14;
+    --card:#121823;
+    --accent:#ff9f1c;
+    --text:#e5e7eb;
+    --muted:#9ca3af;
+}
 
-    .container {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 20px;
-        text-align: center;
-    }
+*{margin:0;padding:0;box-sizing:border-box}
 
-    .logo img {
-        max-width: 320px;
-        width: 100%;
-        height: auto;
-        margin: 30px auto;
-    }
+body{
+    font-family: Inter, Segoe UI, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.5;
+}
 
-    h1 {
-        font-size: 22px;
-        margin-bottom: 15px;
-    }
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:0 16px;
+}
 
-    h2 {
-        font-size: 18px;
-        margin-top: 35px;
-        margin-bottom: 10px;
-    }
+/* TOP */
+.top{
+    background:#000;
+    text-align:center;
+    padding:10px;
+    font-weight:700;
+    letter-spacing:2px;
+}
 
-    h3 {
-        font-size: 16px;
-        margin-top: 25px;
-    }
+/* HERO */
+.hero{
+    padding:70px 0 50px;
+    background:
+        linear-gradient(180deg,rgba(0,0,0,.85),rgba(0,0,0,.95)),
+        radial-gradient(circle at top,#1b2333,#000);
+}
 
-    p {
-        font-size: 15px;
-        margin-bottom: 15px;
-    }
+.hero h1{
+    font-size:2.2rem;
+    margin-bottom:15px;
+}
 
-    ul {
-        text-align: left;
-        max-width: 720px;
-        margin: 0 auto 20px;
-        padding-left: 20px;
-    }
+.hero p{
+    color:var(--muted);
+    max-width:720px;
+    font-size:1.05rem;
+}
 
-    li {
-        margin-bottom: 6px;
-    }
+.hero strong{color:#fff}
 
-    .phone {
-        font-size: 22px;
-        font-weight: bold;
-        margin: 30px 0;
-    }
+.hero-actions{
+    margin-top:30px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
 
-    .footer {
-        font-size: 13px;
-        color: #444;
-        margin-top: 40px;
-    }
+.btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:16px 28px;
+    border-radius:8px;
+    font-weight:700;
+    text-decoration:none;
+    transition:.25s;
+}
+
+.btn-call{
+    background:var(--accent);
+    color:#000;
+}
+
+.btn-call:hover{opacity:.85}
+
+.btn-whatsapp{
+    border:2px solid var(--accent);
+    color:var(--accent);
+}
+
+.btn-whatsapp:hover{
+    background:var(--accent);
+    color:#000;
+}
+
+/* BLOCK */
+section{padding:50px 0}
+
+.title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.title h2{
+    font-size:1.9rem;
+}
+
+.title p{
+    color:var(--muted);
+    margin-top:8px;
+}
+
+/* SERVICES */
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:var(--card);
+    padding:28px;
+    border-radius:14px;
+    border:1px solid rgba(255,255,255,.04);
+}
+
+.card i{
+    font-size:2.4rem;
+    color:var(--accent);
+}
+
+.card h3{
+    margin:15px 0;
+}
+
+.card ul{
+    list-style:none;
+}
+
+.card li{
+    padding:8px 0;
+    color:var(--muted);
+}
+
+/* ADVANTAGES */
+.why{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:18px;
+}
+
+.why div{
+    background:#0f1522;
+    padding:18px;
+    border-radius:10px;
+    border-left:4px solid var(--accent);
+}
+
+/* OBJECTS */
+.objects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:12px;
+}
+
+.object{
+    background:#0f1522;
+    text-align:center;
+    padding:12px;
+    border-radius:8px;
+    font-weight:600;
+}
+
+/* FOOTER CTA */
+.footer-cta{
+    background:#000;
+    padding:45px 0;
+    text-align:center;
+}
+
+.footer-cta h2{
+    margin-bottom:15px;
+}
+
+.footer-cta a{
+    font-size:1.3rem;
+    color:var(--accent);
+    font-weight:800;
+    text-decoration:none;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .hero h1{font-size:1.7rem}
+}
 </style>
 </head>
 
 <body>
+
+<div class="top">ИНЖЕНЕРНАЯ ФИРМА «ПРОЕКТ+»</div>
+
+<section class="hero">
 <div class="container">
-
-    <!-- КАРТИНКА (встроена напрямую) -->
-    <div class="logo">
-        <img src="data:image/jpeg;base64,
-        /9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEBUQEA8PDw8PDw8PDw8PDw8PDw8PFREWFhURFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OFxAQFy0dHR0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAQ4AygMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAEBQADBgIBB//EADYQAAIBAwMCBAQEBQMFAQAAAAECAwAEEQUhMQYSQVEHImFxgZGhMkKhwdHwFCNSYnLxM2KC/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAECAwQF/8QAJBEBAQEAAgICAgMBAAAAAAAAAAECEQMhEjFBBBEiUWEUMlH/2gAMAwEAAhEDEQA/AP0Qoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo"
-        alt="ПРОЕКТ+ Отопление Вентиляция Кондиционирование">
-    </div>
-
-    <h1>🔥❄️ ОТОПЛЕНИЕ • ВЕНТИЛЯЦИЯ • КОНДИЦИОНИРОВАНИЕ</h1>
-
+    <h1>Отопление • Вентиляция • Кондиционирование</h1>
     <p>
-        Проектируем, монтируем и обслуживаем инженерные системы
-        <strong>под ключ</strong> для квартир, домов, офисов и коммерческих объектов.
+        <strong>Проектирование, монтаж и обслуживание под ключ.</strong><br>
+        Работаем для тех, кому нужно <strong>надёжно, аккуратно и надолго</strong>.<br>
+        Республика Дагестан.
     </p>
 
-    <p>
-        Мы создаём комфортный и здоровый микроклимат в любое время года —
-        тепло зимой, свежий воздух круглый год и прохлада летом.
-    </p>
+    <div class="hero-actions">
+        <a class="btn btn-call" href="tel:+79604109696">
+            <i class="fas fa-phone"></i> Позвонить
+        </a>
 
-    <h2>✅ Наши услуги</h2>
-
-    <h3>Отопление</h3>
-    <ul>
-        <li>Проектирование систем отопления</li>
-        <li>Тёплые полы (водяные)</li>
-        <li>Радиаторное отопление</li>
-        <li>Котлы: газовые, электрические, твердотопливные</li>
-        <li>Автоматика и погодозависимое управление</li>
-    </ul>
-
-    <h3>Вентиляция</h3>
-    <ul>
-        <li>Приточно-вытяжная вентиляция</li>
-        <li>Вентиляция частных домов и квартир</li>
-        <li>Вентиляция офисов, магазинов, кафе</li>
-        <li>Рекуперация тепла</li>
-        <li>Шумоподавление и балансировка систем</li>
-    </ul>
-
-    <h3>Кондиционирование</h3>
-    <ul>
-        <li>Подбор и установка сплит-систем</li>
-        <li>Мультисплит-системы</li>
-        <li>Канальные и кассетные кондиционеры</li>
-        <li>Обслуживание и заправка</li>
-        <li>Инверторные решения для экономии энергии</li>
-    </ul>
-
-    <h2>💡 Почему выбирают нас</h2>
-    <ul>
-        <li>Индивидуальный расчёт под объект</li>
-        <li>Современные и энергоэффективные решения</li>
-        <li>Аккуратный монтаж по СНиП</li>
-        <li>Надёжное оборудование</li>
-        <li>Гарантия на работы</li>
-        <li>Честная цена без скрытых доплат</li>
-    </ul>
-
-    <h2>🛠 Работаем</h2>
-    <ul>
-        <li>Квартиры</li>
-        <li>Частные дома</li>
-        <li>Офисы</li>
-        <li>Магазины</li>
-        <li>Кафе и рестораны</li>
-        <li>Производственные помещения</li>
-    </ul>
-
-    <div class="phone">
-        📞 +7 960 410 96 96
+        <a class="btn btn-whatsapp" href="https://wa.me/79604109696">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
     </div>
-
-    <div class="footer">
-        ПРОЕКТ+ • Инженерные системы под ключ
-    </div>
-
 </div>
+</section>
+
+<section>
+<div class="container">
+<div class="title">
+    <h2>Услуги</h2>
+    <p>Инженерные системы без компромиссов</p>
+</div>
+
+<div class="services">
+    <div class="card">
+        <i class="fas fa-fire"></i>
+        <h3>Отопление</h3>
+        <ul>
+            <li>Проектирование</li>
+            <li>Тёплые полы</li>
+            <li>Котлы и автоматика</li>
+            <li>Частные дома и коттеджи</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <i class="fas fa-wind"></i>
+        <h3>Вентиляция</h3>
+        <ul>
+            <li>Приточно-вытяжные системы</li>
+            <li>Рекуперация</li>
+            <li>Коммерческие объекты</li>
+            <li>Балансировка и шум</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <i class="fas fa-snowflake"></i>
+        <h3>Кондиционирование</h3>
+        <ul>
+            <li>Сплит и канальные системы</li>
+            <li>Инверторные решения</li>
+            <li>Обслуживание</li>
+        </ul>
+    </div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="title">
+    <h2>Почему мы</h2>
+</div>
+
+<div class="why">
+    <div>Работаем <strong>под ключ</strong>, а не «по кускам»</div>
+    <div>Инженерный расчёт, а не «на глаз»</div>
+    <div>Дороже рынка — <strong>зато без переделок</strong></div>
+    <div>Ответственность за результат</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="title">
+    <h2>Объекты</h2>
+</div>
+
+<div class="objects">
+    <div class="object">Квартиры</div>
+    <div class="object">Коттеджи</div>
+    <div class="object">Офисы</div>
+    <div class="object">Кафе</div>
+    <div class="object">Магазины</div>
+    <div class="object">Производство</div>
+</div>
+</div>
+</section>
+
+<section class="footer-cta">
+<div class="container">
+    <h2>Готовы обсудить проект?</h2>
+    <a href="tel:+79604109696">📞 +7 960 410 96 96</a>
+</div>
+</section>
+
 </body>
 </html>
